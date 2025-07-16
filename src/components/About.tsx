@@ -1,18 +1,21 @@
 
 import React from 'react';
-import { GraduationCap, MapPin, Briefcase, Award } from 'lucide-react';
+import { GraduationCap, MapPin, Briefcase, Award, Brain } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
   return (
-    <section id="about" className="section-padding bg-muted/50">
+    <section id="about" className="section-padding bg-muted/50 circuit-pattern">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="text-gradient">Me</span>
+        <div className="text-center mb-16 relative">
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8">
+            <Brain className="w-16 h-16 text-blue-400/30 animate-neural-pulse" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mono">
+            About <span className="text-gradient-ai">Me.profile</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Passionate technology professional with expertise in software development, 
+            <span className="text-cyan-400 font-mono">[USER_PROFILE]</span> Passionate technology professional with expertise in software development, 
             cybersecurity, and ICT consulting
           </p>
         </div>
@@ -20,7 +23,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none holographic p-6 rounded-xl border border-blue-400/20 bg-card/50 backdrop-blur-sm">
               <p className="text-muted-foreground leading-relaxed">
                 I'm a dedicated ICT Consultant and Software Developer based in Kenya, with a strong passion 
                 for creating innovative technology solutions. My journey in tech began with a Bachelor's 
@@ -38,12 +41,12 @@ const About = () => {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-4 bg-background rounded-lg border">
-                <div className="text-2xl font-bold text-portfolio-blue">5+</div>
+              <div className="text-center p-4 bg-blue-600/10 border border-blue-400/30 rounded-lg animate-neural-pulse">
+                <div className="text-2xl font-bold text-blue-400 font-mono">5+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
-              <div className="text-center p-4 bg-background rounded-lg border">
-                <div className="text-2xl font-bold text-portfolio-green">20+</div>
+              <div className="text-center p-4 bg-green-600/10 border border-green-400/30 rounded-lg animate-neural-pulse" style={{ animationDelay: '1s' }}>
+                <div className="text-2xl font-bold text-green-400 font-mono">20+</div>
                 <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>
             </div>
@@ -51,14 +54,14 @@ const About = () => {
 
           {/* Info Cards */}
           <div className="space-y-6">
-            <Card className="card-hover">
+            <Card className="card-hover-ai holographic border border-blue-400/20 bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-portfolio-blue/10 rounded-lg">
-                    <GraduationCap className="w-6 h-6 text-portfolio-blue" />
+                  <div className="p-3 bg-blue-600/10 border border-blue-400/30 rounded-lg animate-neural-pulse">
+                    <GraduationCap className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Education</h3>
+                    <h3 className="font-semibold mb-2 font-mono">Education</h3>
                     <p className="text-muted-foreground">Bachelor of Science in Information Technology</p>
                     <p className="text-sm text-muted-foreground">Umma University</p>
                   </div>
@@ -66,14 +69,14 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="card-hover">
+            <Card className="card-hover-ai holographic border border-green-400/20 bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-portfolio-green/10 rounded-lg">
-                    <Briefcase className="w-6 h-6 text-portfolio-green" />
+                  <div className="p-3 bg-green-600/10 border border-green-400/30 rounded-lg animate-neural-pulse">
+                    <Briefcase className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Current Role</h3>
+                    <h3 className="font-semibold mb-2 font-mono">Current Role</h3>
                     <p className="text-muted-foreground">ICT Consultant</p>
                     <p className="text-sm text-muted-foreground">ADC Corporation, Kisumu</p>
                   </div>
@@ -81,14 +84,14 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="card-hover">
+            <Card className="card-hover-ai holographic border border-cyan-400/20 bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-portfolio-blue/10 rounded-lg">
-                    <MapPin className="w-6 h-6 text-portfolio-blue" />
+                  <div className="p-3 bg-cyan-600/10 border border-cyan-400/30 rounded-lg animate-neural-pulse">
+                    <MapPin className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Location</h3>
+                    <h3 className="font-semibold mb-2 font-mono">Location</h3>
                     <p className="text-muted-foreground">Kisumu, Kenya</p>
                     <p className="text-sm text-muted-foreground">Available for remote work</p>
                   </div>
@@ -96,14 +99,14 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="card-hover">
+            <Card className="card-hover-ai holographic border border-purple-400/20 bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-portfolio-green/10 rounded-lg">
-                    <Award className="w-6 h-6 text-portfolio-green" />
+                  <div className="p-3 bg-purple-600/10 border border-purple-400/30 rounded-lg animate-neural-pulse">
+                    <Award className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Specializations</h3>
+                    <h3 className="font-semibold mb-2 font-mono">Specializations</h3>
                     <p className="text-muted-foreground">Full-Stack Development, Cybersecurity, ICT Consulting</p>
                   </div>
                 </div>
